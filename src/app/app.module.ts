@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './_modules/login/login.module';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
     declarations: [
@@ -14,6 +17,9 @@ import { LoginModule } from './_modules/login/login.module';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-auth-firebase'),
+        // AngularFirestoreModule,
+        AngularFireAuthModule,
         LoginModule
     ],
     providers: [],
