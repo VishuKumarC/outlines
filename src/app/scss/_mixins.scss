@@ -1,0 +1,45 @@
+//MEDIA QUERY MANAGER
+
+/* 
+0 - 767px       -   Our Normal styles
+768px - 900px   -   Tablet Potrait
+900px - 1200px  -   Tablet Landscape
+1200px - 1800px -   Laptop
+1800px above    -   Big desktop
+
+
+$breakpoint argument choices
+~ phone
+~ tab-portrait
+~ tab-landscape
+~ big-desktop
+
+1em = 16px (coming from the browser as the rem that we defined doesn't work in the media queries)
+ */
+
+@mixin breakpoint($breakpoint) {
+    @if $breakpoint == tab-portrait {
+        // Tablet-portrait
+        @media only screen and (min-width: 48em) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-landscape {
+        // Tablet-landscape
+        @media only screen and (min-width: 56.25em) {
+            @content;
+        }
+    }
+    @if $breakpoint == laptop {
+        // Laptop
+        @media only screen and (min-width: 75em) {
+            @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        // Desktop
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        }
+    }
+}

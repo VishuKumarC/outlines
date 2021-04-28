@@ -1,0 +1,30 @@
+@import "src/app/scss/variables";
+@import "src/app/scss/mixins";
+
+.login-container {
+    background-image: url("https://getwallpapers.com/wallpaper/full/c/6/9/1555681.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .card {
+        height: 370px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 400px;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        color: $white;
+
+        &__social-icon span {
+            font-size: 2rem;
+            color: $icon-color;
+        }
+    }
+
+    .row-icon {
+        background-color: $icon-color;
+        justify-content: center;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        color: $black;
+    }
+}
