@@ -1,0 +1,16 @@
+/*
+Select whole page and apply these CSS to render the website
+in the same way in all web-browsers
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; // Inherit from body tag
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px i.e. 62.5%
+}

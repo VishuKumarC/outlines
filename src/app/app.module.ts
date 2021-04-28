@@ -8,6 +8,7 @@ import { LoginModule } from './_modules/login/login.module';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { SharedModule } from './_modules/shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
         AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-auth-firebase'),
         // AngularFirestoreModule,
         AngularFireAuthModule,
+        SharedModule,
         LoginModule
     ],
     providers: [],
